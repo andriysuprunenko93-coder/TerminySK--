@@ -37,6 +37,8 @@ setLink("heroTelegram", siteConfig.telegramUrl);
 setLink("heroChannel", siteConfig.telegramChannelUrl, "TG канал");
 setLink("heroWhatsApp", whatsappUrl);
 setLink("channelButton", siteConfig.telegramChannelUrl);
+setLink("faqWhatsApp", whatsappUrl, "Написати в WhatsApp");
+setLink("faqTelegram", siteConfig.telegramUrl, "Написати в Telegram");
 setLink("contactChannel", siteConfig.telegramChannelUrl);
 setLink("contactWhatsApp", whatsappUrl, `WhatsApp: ${siteConfig.whatsappNumber}`);
 setLink("contactTelegram", siteConfig.telegramUrl);

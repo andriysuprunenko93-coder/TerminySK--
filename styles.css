@@ -629,6 +629,7 @@ a {
 
 .services-band,
 .formats-band,
+.faq-band,
 .contact-band {
   padding: 72px 0;
 }
@@ -724,6 +725,88 @@ a {
   border: 1px solid rgba(25, 78, 142, 0.12);
   box-shadow: 0 12px 30px rgba(16, 71, 133, 0.08);
   font-weight: 700;
+}
+
+.faq-band {
+  background: linear-gradient(180deg, #f5faff 0%, #eaf4ff 100%);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.faq-list details {
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid rgba(16, 49, 86, 0.1);
+  box-shadow: 0 14px 34px rgba(9, 54, 105, 0.08);
+  overflow: hidden;
+}
+
+.faq-list summary {
+  min-height: 64px;
+  padding: 20px 22px;
+  cursor: pointer;
+  font-weight: 800;
+  list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary::after {
+  content: "+";
+  float: right;
+  color: var(--accent);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.faq-list details[open] summary::after {
+  content: "-";
+}
+
+.faq-list p {
+  margin: 0;
+  padding: 0 22px 22px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.faq-cta {
+  position: sticky;
+  top: 96px;
+  padding: 26px;
+  border-radius: 26px;
+  background: linear-gradient(180deg, #0f2f56, #17467d);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.faq-cta strong {
+  display: block;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.faq-cta p {
+  margin: 0 0 18px;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.65;
+}
+
+.faq-cta .button + .button {
+  margin-top: 12px;
 }
 
 .hero-text strong {
@@ -837,6 +920,7 @@ code {
   .proofs-layout,
   .formats-grid,
   .contact-grid,
+  .faq-grid,
   .channel-grid,
   .benefit-grid,
   .service-grid {
@@ -897,6 +981,7 @@ code {
   .visuals,
   .benefits,
   .channel-grid,
+  .faq-band,
   .services-band,
   .formats-band,
   .contact-band {
@@ -912,8 +997,13 @@ code {
     width: 100%;
   }
 
+  .faq-cta {
+    position: static;
+  }
+
   .showcase-copy,
-  .contact-box {
+  .contact-box,
+  .faq-cta {
     padding: 22px;
   }
 

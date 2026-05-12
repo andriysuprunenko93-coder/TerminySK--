@@ -42,6 +42,55 @@
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Archivo+Black&display=swap"
     rel="stylesheet"
   >
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "TerminySK | Документи в Словаччині",
+      "url": "https://www.terminysk.com/",
+      "image": "https://www.terminysk.com/assets/profile-photo.jpg",
+      "telephone": "+421950703432",
+      "areaServed": "Slovakia",
+      "description": "Допомога іноземцям у Словаччині з документами, записом на термін, побитом, візами та консультаціями.",
+      "sameAs": [
+        "https://t.me/terminysk",
+        "https://t.me/SlovakiaInfo1",
+        "https://www.tiktok.com/@minskterminy"
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "З якими документами можна звернутися?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Можна звернутися щодо Dočasné útočisko, prechodný pobyt, trvalý pobyt, víza, запису на поліцію, підготовки документів і консультацій."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Чи можна отримати консультацію онлайн?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Так, основний формат роботи онлайн через Telegram або WhatsApp після короткого опису ситуації клієнта."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Що потрібно написати для швидкої відповіді?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Напишіть місто подачі, тип документів, статус перебування і що саме потрібно зробити: запис, перевірка, подача або консультація."
+          }
+        }
+      ]
+    }
+  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -62,6 +111,7 @@
         <a class="nav-link" href="#proofs">Докази</a>
         <a class="nav-link" href="#benefits">Переваги</a>
         <a class="nav-link" href="#formats">Оформлення</a>
+        <a class="nav-link" href="#faq">Питання</a>
         <a class="nav-link" href="#contact">Контакт</a>
       </nav>
       <div class="topbar-actions">
@@ -335,6 +385,47 @@
           <span>Rodné číslo</span>
           <span>Živnosť</span>
           <span>Студентські знижки</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-band" id="faq" data-section="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Часті питання</p>
+          <h2>Що важливо знати перед зверненням</h2>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-list">
+            <details open>
+              <summary>З якими документами можна звернутися?</summary>
+              <p>Dočasné útočisko, prechodný pobyt, trvalý pobyt, víza, запис на поліцію, підготовка документів, консультації та супровід.</p>
+            </details>
+            <details>
+              <summary>Чи можна все вирішити онлайн?</summary>
+              <p>Більшість підготовки проходить онлайн через Telegram або WhatsApp. Після опису ситуації підкажемо, які кроки потрібні саме у вашому випадку.</p>
+            </details>
+            <details>
+              <summary>Що написати для швидкої відповіді?</summary>
+              <p>Напишіть місто подачі, тип документів, ваш статус у Словаччині та що потрібно: запис, перевірка, подача або консультація.</p>
+            </details>
+            <details>
+              <summary>Чи є знижки для студентів?</summary>
+              <p>Так, для студентів доступні знижки на окремі послуги. Напишіть, яка саме допомога потрібна, і ми уточнимо умови.</p>
+            </details>
+            <details>
+              <summary>Чи безпечно надсилати документи?</summary>
+              <p>Особисті дані використовуються тільки для роботи по вашому питанню. На публічних прикладах дані клієнтів приховуються.</p>
+            </details>
+          </div>
+
+          <aside class="faq-cta">
+            <strong>Потрібна відповідь по вашій ситуації?</strong>
+            <p>Напишіть коротко, що саме потрібно оформити або перевірити. Так ми швидше підкажемо наступний крок.</p>
+            <a class="button primary full" id="faqWhatsApp" href="#" target="_blank" rel="noreferrer">Написати в WhatsApp</a>
+            <a class="button ghost full" id="faqTelegram" href="#" target="_blank" rel="noreferrer">Написати в Telegram</a>
+          </aside>
         </div>
       </div>
     </section>
