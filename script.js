@@ -1,5 +1,5 @@
 const siteConfig = {
-  brandName: "Terminy SK",
+  brandName: "TerminySK",
   telegramHandle: "@terminysk",
   telegramUrl: "https://t.me/terminysk",
   telegramChannelUrl: "https://t.me/SlovakiaInfo1",
@@ -46,7 +46,7 @@ setLink("footerChannel", siteConfig.telegramChannelUrl);
 setLink("footerTiktok", siteConfig.tiktokUrl);
 setLink("footerWhatsApp", whatsappUrl);
 
-document.title = `${siteConfig.brandName} | Документи та терміни у Словаччині`;
+document.title = `${siteConfig.brandName} | Документи в Словаччині`;
 
 const navLinks = [...document.querySelectorAll(".nav-link")];
 const navMap = new Map(navLinks.map((link) => [link.getAttribute("href"), link]));

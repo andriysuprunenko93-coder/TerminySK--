@@ -1,6 +1,6 @@
 {
-  "name": "Terminy SK-UA",
-  "short_name": "Terminy SK",
+  "name": "TerminySK | Документи в Словаччині",
+  "short_name": "TerminySK",
   "description": "Documents, appointments and legal stay support in Slovakia.",
   "start_url": "./index.html",
   "display": "standalone",

@@ -1,4 +1,4 @@
-# Terminy SK-UA
+# TerminySK | Документи в Словаччині
 
 Professional landing page for document, appointment and legal stay support services for foreigners in Slovakia.
 
