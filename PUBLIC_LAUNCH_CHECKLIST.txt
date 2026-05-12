@@ -13,6 +13,7 @@ TERMINY SK-UA PUBLIC LAUNCH CHECKLIST
 3. Add Google visibility
 - Add the domain to Google Search Console.
 - Submit sitemap after the domain is live.
+- Sitemap URL: https://www.terminysk.com/sitemap.xml
 - Create or update Google Business Profile if you want to appear on Google Maps/Search.
 
 4. Promotion

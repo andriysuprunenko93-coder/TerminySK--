@@ -40,6 +40,9 @@ STEP 4 - After deployment
 Vercel will give a link like:
 https://terminy-sk-ua.vercel.app
 
+Current public domain:
+https://www.terminysk.com
+
 Send that link to clients, add it to:
 - TikTok bio
 - Telegram channel
