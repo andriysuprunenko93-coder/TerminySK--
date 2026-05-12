@@ -863,6 +863,15 @@ code {
 }
 
 @media (max-width: 760px) {
+  section[id] {
+    scroll-margin-top: 18px;
+  }
+
+  .site-header {
+    position: static;
+    backdrop-filter: none;
+  }
+
   .topbar {
     min-height: auto;
     padding: 14px 0;
