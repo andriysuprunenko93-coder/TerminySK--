@@ -2,6 +2,8 @@
 site-preview*.png
 live-*.png
 faq-check.png
+PROMOTION_TEXTS.txt
+GROWTH_PLAN.txt
 Thumbs.db
 .DS_Store
 .vercel
