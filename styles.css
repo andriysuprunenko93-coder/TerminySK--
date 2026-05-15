@@ -753,6 +753,11 @@ a {
   gap: 18px;
 }
 
+.visuals-grid.single {
+  grid-template-columns: minmax(0, 540px);
+  justify-content: center;
+}
+
 .visual-card {
   margin: 0;
   overflow: hidden;
@@ -771,6 +776,10 @@ a {
 .visual-card img {
   aspect-ratio: 4 / 5;
   object-position: top center;
+}
+
+.visual-card.compact img {
+  aspect-ratio: 4 / 4.75;
 }
 
 .visual-card figcaption {
@@ -1096,6 +1105,10 @@ code {
   }
 
   .hero-trust {
+    grid-template-columns: 1fr;
+  }
+
+  .visuals-grid.single {
     grid-template-columns: 1fr;
   }
 }
