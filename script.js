@@ -29,6 +29,16 @@ setText("heroHandle", siteConfig.telegramHandle);
 const whatsappDigits = siteConfig.whatsappNumber.replace(/\D+/g, "");
 const whatsappUrl = `https://wa.me/${whatsappDigits}`;
 
+const trackEvent = (name, data = {}) => {
+  if (typeof window !== "undefined" && typeof window.va === "function") {
+    try {
+      window.va("event", { name, data });
+    } catch (error) {
+      // Ignore analytics transport issues so UI behavior stays unaffected.
+    }
+  }
+};
+
 setLink("headerTelegram", siteConfig.telegramUrl, "Telegram");
 setLink("headerChannel", siteConfig.telegramChannelUrl, "TG канал");
 setLink("headerTiktok", siteConfig.tiktokUrl, "TikTok");
@@ -85,6 +95,42 @@ navLinks.forEach((link) => {
     const href = link.getAttribute("href");
     if (href && navMap.has(href)) {
       setActiveNav(href.slice(1));
+      trackEvent("nav_click", { target: href.slice(1) });
+    }
+  });
+});
+
+[
+  ["headerTelegram", "cta_click", { placement: "header", channel: "telegram" }],
+  ["headerChannel", "cta_click", { placement: "header", channel: "telegram_channel" }],
+  ["headerTiktok", "cta_click", { placement: "header", channel: "tiktok" }],
+  ["headerWhatsApp", "cta_click", { placement: "header", channel: "whatsapp" }],
+  ["heroTelegram", "cta_click", { placement: "hero", channel: "telegram" }],
+  ["heroChannel", "cta_click", { placement: "hero", channel: "telegram_channel" }],
+  ["heroWhatsApp", "cta_click", { placement: "hero", channel: "whatsapp" }],
+  ["channelButton", "cta_click", { placement: "channel_section", channel: "telegram_channel" }],
+  ["faqWhatsApp", "cta_click", { placement: "faq", channel: "whatsapp" }],
+  ["faqTelegram", "cta_click", { placement: "faq", channel: "telegram" }],
+  ["contactWhatsApp", "cta_click", { placement: "contact", channel: "whatsapp" }],
+  ["contactTelegram", "cta_click", { placement: "contact", channel: "telegram" }],
+  ["contactChannel", "cta_click", { placement: "contact", channel: "telegram_channel" }],
+  ["contactTiktok", "cta_click", { placement: "contact", channel: "tiktok" }],
+  ["footerTelegram", "cta_click", { placement: "footer", channel: "telegram" }],
+  ["footerChannel", "cta_click", { placement: "footer", channel: "telegram_channel" }],
+  ["footerTiktok", "cta_click", { placement: "footer", channel: "tiktok" }],
+  ["footerWhatsApp", "cta_click", { placement: "footer", channel: "whatsapp" }]
+].forEach(([id, eventName, data]) => {
+  const node = document.getElementById(id);
+  if (node) {
+    node.addEventListener("click", () => trackEvent(eventName, data));
+  }
+});
+
+document.querySelectorAll(".faq-list details").forEach((details) => {
+  details.addEventListener("toggle", () => {
+    if (details.open) {
+      const title = details.querySelector("summary")?.textContent?.trim();
+      trackEvent("faq_open", { question: title || "faq_item" });
     }
   });
 });
