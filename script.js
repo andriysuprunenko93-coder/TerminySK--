@@ -60,6 +60,43 @@ setLink("footerWhatsApp", whatsappUrl);
 
 document.title = `${siteConfig.brandName} | Документи в Словаччині`;
 
+document.querySelectorAll("[data-telegram-link]").forEach((node) => {
+  node.href = siteConfig.telegramUrl;
+});
+
+document.querySelectorAll("[data-telegram-channel-link]").forEach((node) => {
+  node.href = siteConfig.telegramChannelUrl;
+});
+
+document.querySelectorAll("[data-tiktok-link]").forEach((node) => {
+  node.href = siteConfig.tiktokUrl;
+});
+
+document.querySelectorAll("[data-whatsapp-link]").forEach((node) => {
+  node.href = whatsappUrl;
+});
+
+const pageTitle = document.body?.dataset?.pageTitle;
+if (pageTitle) {
+  document.title = pageTitle;
+}
+
+[
+  ["[data-telegram-link]", "telegram"],
+  ["[data-telegram-channel-link]", "telegram_channel"],
+  ["[data-tiktok-link]", "tiktok"],
+  ["[data-whatsapp-link]", "whatsapp"]
+].forEach(([selector, channel]) => {
+  document.querySelectorAll(selector).forEach((node) => {
+    node.addEventListener("click", () =>
+      trackEvent("cta_click", {
+        placement: node.dataset.placement || "page",
+        channel
+      })
+    );
+  });
+});
+
 const navLinks = [...document.querySelectorAll(".nav-link")];
 const navMap = new Map(navLinks.map((link) => [link.getAttribute("href"), link]));
 const sections = [...document.querySelectorAll("section[id]")];

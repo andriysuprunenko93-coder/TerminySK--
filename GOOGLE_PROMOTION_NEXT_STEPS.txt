@@ -1,0 +1,44 @@
+GOOGLE PROMOTION NEXT STEPS FOR TERMINYSK
+
+What is already done on the site:
+- Google Search Console is connected
+- sitemap.xml exists and includes the main pages
+- the main site is indexed
+- separate landing pages were added for services and cities
+- internal links between pages were added
+- Vercel Analytics and Speed Insights are connected
+
+What still needs your Google account or manual action:
+
+1. Google Business Profile
+- create or finish the profile for TerminySK
+- add the website: https://www.terminysk.com
+- add WhatsApp / Telegram in the description if useful
+- choose the closest business category available in Google at that moment
+- add service areas that match your work
+- upload logo, cover, work photos, proofs with hidden personal data
+
+2. Reviews
+- ask satisfied clients to leave short reviews
+- screenshots on the site help trust, but Google reviews help search visibility too
+
+3. Search Console follow-up
+- re-submit sitemap after big updates
+- request indexing for the most important new pages
+- watch which pages start getting impressions
+
+4. Google Ads (if you want faster visibility)
+- start with Search ads, not Display
+- send traffic to the most relevant landing page, not always only to the homepage
+- test separate campaigns for:
+  - zapis na termin
+  - docasne utocisko
+  - prechodny pobyt
+  - trvaly pobyt
+  - viza slovachchyna
+  - bratislava / nitra / nove zamky
+
+5. What to improve next on the site
+- add more city pages if real demand appears
+- add more service-specific proofs
+- later add language versions if you want stronger Poland / Czechia / Slovakia traffic
