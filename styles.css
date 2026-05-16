@@ -170,14 +170,40 @@ a {
   color: var(--text);
   font-weight: 700;
   flex: 0 0 auto;
+  position: relative;
+  overflow: hidden;
   transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+.nav-link::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #7fc2ff, #2a8cff);
+  box-shadow: 0 0 0 4px rgba(42, 140, 255, 0.08);
+  flex: 0 0 auto;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.44) 48%, transparent 100%);
+  transform: translateX(-135%);
+  transition: transform 280ms ease;
 }
 
 .nav-link:hover {
   transform: translateY(-1px);
   background: #ffffff;
   border-color: rgba(42, 140, 255, 0.32);
-  box-shadow: 0 10px 24px rgba(33, 104, 185, 0.12);
+  box-shadow: 0 12px 30px rgba(33, 104, 185, 0.16);
+}
+
+.nav-link:hover::after {
+  transform: translateX(135%);
 }
 
 .nav-link.active {
@@ -185,6 +211,11 @@ a {
   border-color: transparent;
   color: #ffffff;
   box-shadow: 0 12px 26px rgba(29, 124, 245, 0.22);
+}
+
+.nav-link.active::before {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.15);
 }
 
 .topbar-actions {
@@ -209,9 +240,15 @@ a {
   transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
+.nav-cta {
+  position: relative;
+  overflow: hidden;
+}
+
 .nav-cta:hover,
 .button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(8, 44, 90, 0.14);
 }
 
 .nav-cta,
@@ -237,10 +274,80 @@ a {
   border: 1px solid rgba(16, 49, 86, 0.12);
 }
 
+.nav-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.3) 48%, transparent 100%);
+  transform: translateX(-135%);
+  transition: transform 320ms ease;
+}
+
+.nav-cta:hover::after {
+  transform: translateX(135%);
+}
+
+#headerTelegram {
+  background: linear-gradient(135deg, #ecf6ff, #dff0ff);
+  border-color: rgba(42, 140, 255, 0.24);
+  color: #1169cf;
+}
+
+#headerChannel {
+  background: linear-gradient(135deg, #eef2ff, #e7f1ff);
+  border-color: rgba(86, 111, 242, 0.2);
+  color: #3452c8;
+}
+
+#headerTiktok {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(247, 251, 255, 0.88)),
+    linear-gradient(135deg, #25f4ee, #fe2c55);
+  border-color: rgba(32, 40, 54, 0.14);
+  color: #172334;
+}
+
+#headerWhatsApp {
+  background: linear-gradient(135deg, #18c36f, #0fa85e);
+  box-shadow: 0 14px 32px rgba(24, 195, 111, 0.24);
+}
+
+#headerWhatsApp:hover {
+  box-shadow: 0 18px 36px rgba(24, 195, 111, 0.32);
+}
+
 .button.ghost {
   background: rgba(255, 255, 255, 0.92);
   color: var(--text);
   border-color: rgba(16, 49, 86, 0.12);
+}
+
+@keyframes ctaPulse {
+  0%,
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 12px 28px rgba(8, 44, 90, 0.08);
+  }
+  50% {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 34px rgba(8, 44, 90, 0.12);
+  }
+}
+
+.topbar-actions .nav-cta {
+  animation: ctaPulse 4.4s ease-in-out infinite;
+}
+
+.topbar-actions .nav-cta:nth-child(2) {
+  animation-delay: 0.45s;
+}
+
+.topbar-actions .nav-cta:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+.topbar-actions .nav-cta:nth-child(4) {
+  animation-delay: 1.35s;
 }
 
 .hero {
@@ -1192,6 +1299,10 @@ code {
   #headerChannel,
   #headerTiktok {
     display: none;
+  }
+
+  .topbar-actions .nav-cta {
+    animation: none;
   }
 
   .hero-grid,
